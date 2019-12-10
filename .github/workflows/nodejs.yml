@@ -12,4 +12,6 @@ jobs:
       with:
         node-version: 10.x
     - name: npm install, build
-      run: npm run build 
+      run: |
+      npm i
+      npm run build 
