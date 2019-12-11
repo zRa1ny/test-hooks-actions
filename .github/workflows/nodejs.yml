@@ -15,6 +15,7 @@ jobs:
       run: |
         npm install
         npm run build 
+        apt-get install yum
         yum install sshpass
         sshpass -p "123456Zr" scp   dist root@106.14.17.48:/root/
     
