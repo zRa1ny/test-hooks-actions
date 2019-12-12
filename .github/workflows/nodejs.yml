@@ -1,26 +1,13 @@
-name: Node CI
+name: Node
 
 on: [push]
 
 jobs:
-  install:
+  installyum:
     runs-on: ubuntu-latest
     steps:
     - name: install yum
       run: sudo apt-get install yum
     - name: install sshpass
-      run: yum install sshpass
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build
-      run: |
-        npm install
-        npm run build 
-        sshpass -p "123456Zr" scp   dist root@106.14.17.48:/root/
+      run: yum install sshpass  
     
