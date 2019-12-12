@@ -3,9 +3,24 @@ name: Node
 on: [push]
 
 jobs:
-  installyum:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: 10.x
     steps:
+    - uses: actions/checkout@v1
     - name: install sshpass
       run: sudo apt-get install sshpass 
+    - name: install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build
+      run: |
+        npm run install 
+        npm run build
+    - name: scp aliyunEcs 
+      run: sshpass -p "123456Zr" scp dist root@106.14.17.48:/root/
+   
     
