@@ -9,5 +9,5 @@ jobs:
     - name: install yum
       run: sudo apt-get install yum
     - name: install sshpass
-      run: yum install sshpass  
+      run: sudo yum install sshpass  
     
