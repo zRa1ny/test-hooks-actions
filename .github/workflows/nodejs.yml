@@ -15,9 +15,9 @@ jobs:
       - name: copy dir to remote server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          source: "static"
-          target: ${{secrets.DIR}}
-          key: ${{secrets.KEY}}
+          host: '106.14.17.48'  
+          username: 'root' 
+          source: '/static'
+          target: '/root'
+          key: '123456Zr' 
           rm: true
