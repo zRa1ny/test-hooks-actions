@@ -12,9 +12,9 @@ jobs:
     - uses: actions/checkout@v1
     # - name: install sshpass
     #   run: sudo apt-get install sshpass 
-    # - name: install Node.js
-    #   uses: actions/setup-node@v1
-    #   with:
+    - name: install Node.js
+      uses: actions/setup-node@v1
+      # with:
     #     node-version: ${{ matrix.node-version }}
     # - name: npm install, build
     #   run: |
