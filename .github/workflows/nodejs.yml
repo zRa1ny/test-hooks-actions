@@ -17,6 +17,6 @@ jobs:
         with:
           host: '106.14.17.48'  
           username: 'root' 
-          source: 'static'
+          source: 'static/index.html'
           target: 'root'
           password: '123456Zr' 
