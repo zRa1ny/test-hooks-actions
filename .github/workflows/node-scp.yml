@@ -1,4 +1,4 @@
-name: node ci
+name: node ci&cd 
 on: 
   push: 
     branches:
@@ -21,7 +21,7 @@ jobs:
           npm install 
           npm run build
       - name: copy dir to remote server
-        uses: appleboy/scp-action@master
+        uses: 18271683093/scp-action@master
         with:
           host: ${{ secrets.server_host }}
           username: ${{ secrets.server_userName }}
