@@ -18,7 +18,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build
       run: |
-        npm run install 
+        npm install 
         npm run build
     - name: scp aliyunEcs 
       run: sshpass -p "123456Zr" scp dist root@106.14.17.48:/root/
